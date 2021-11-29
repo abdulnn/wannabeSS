@@ -1,0 +1,34 @@
+.employeeCount-text {
+  position: absolute;
+  width: 175px;
+  height: 16px;
+  left: 1425px;
+  top: 15px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+.employeeCount-no {
+  position: absolute;
+  width: 24px;
+  height: 45px;
+  left: 1565px;
+  top: 0px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #ff1a40;
+}
