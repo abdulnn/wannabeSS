@@ -5,7 +5,7 @@ import Illustrationimg from "../../../../assets/images/Illustrationimage.png";
 function Illustration() {
   return (
     <div className="Introduction">
-      <div id="illustrationImage">
+      <div id="illustration_Image">
         <img src={Illustrationimg} alt="" />
       </div>
     </div>

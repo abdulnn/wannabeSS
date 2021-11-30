@@ -17,9 +17,9 @@ function Description() {
         Suave goes far above and to add growth and value to your business in
         this cut-throat competition. We are headquartered in Ellicott City,
         Maryland and have development centres in Bangalore and Chennai.
-      </p>
+      </p><br/>
       <p>Soft Suave is an ISO 9001-2015 certified company</p>
-      <br />
+      <br /><br/>
       <p>Fill in the form below If your interested to be an employee</p>
     </div>
   );

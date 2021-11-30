@@ -3,7 +3,7 @@ import "./style.css";
 
 function EmployeeTable() {
   return (
-    <div className="Empoyee-table">
+    <div className="Empoyee_table">
       <table id="table">
         <tr>
           <th>Name</th>

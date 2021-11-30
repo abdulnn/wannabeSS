@@ -1,62 +1,35 @@
-#employee-form {
-  position: absolute;
+#employee_form {
   width: 260px;
   height: 360px;
-  left: 300px;
-  top: 430px;
-  background: #ffffff;
   border: 1px solid #ff1a40;
   box-sizing: border-box;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 label {
-  font-family: Nunito Sans;
-  font-size: 16px;
-  line-height: 115%;
   letter-spacing: 0.01em;
-  padding: 8px;
+  padding: 7px;
+  font-size: 13px;
+  align-self: center;
+  width:80%;
+}
+input{
+  padding: 7px;
+  width:80%;
+  align-self: center;
+  font-size: 12px;
 }
 select {
-  font-family: Nunito Sans;
-  font-size: 16px;
-  line-height: 115%;
-  letter-spacing: 0.01em;
-  height: 22px;
-  width: 150px;
+  align-self: center;
+  padding:7px;
+  width:85%;
 }
 .buttons {
   display: flex;
-  flex-direction: row;
-  text-align: center;
+  justify-content: space-around;
+  padding:20px 0;
 }
 
-button {
-  justify-content: center;
-  width: 91.53px;
-  height: 28.08px;
-  background: #ff1a40;
-  font-family: Nunito Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 115%;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.01em;
-  color: #ffffff;
-  border-radius: 10px;
-}
-button:hover {
-  background-color: white;
-  color: black;
-}
-.addbutton {
-  margin: 18px;
-}
-.cancelbutton {
-  margin: 18px;
-}
+

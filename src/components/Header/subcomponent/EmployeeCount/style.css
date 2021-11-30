@@ -1,34 +1,18 @@
-.employeeCount-text {
-  position: absolute;
-  width: 175px;
-  height: 16px;
-  left: 1425px;
-  top: 15px;
-  font-family: Work Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 15px;
-  display: flex;
+.employeeCount{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 230px;
   align-items: center;
-  text-align: center;
+}
+.employeeCount_text {
+  width: 170px;
+  font-size: 14px;
   letter-spacing: -0.02em;
   color: #000000;
 }
-.employeeCount-no {
-  position: absolute;
-  width: 24px;
-  height: 45px;
-  left: 1565px;
-  top: 0px;
-  font-family: Work Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 34px;
-  line-height: 40px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: -0.02em;
+.employeeCount_no {
+  font-size: 40px;
   color: #ff1a40;
+  font-weight: 700 ;
 }
