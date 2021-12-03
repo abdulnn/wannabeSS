@@ -1,14 +1,18 @@
 import "./style.css";
-import React from "react";
+import React, {useContext} from "react";
+import {EmployeeContext} from '../../../../context/EmployeeContext'
 
-function Employeecount({count}) { 
+function Employeecount() { 
+  const [employees] = useContext(EmployeeContext)
+
+  const count=(employees).length
   return (
     <div className="employeeCount">
       <div className="employeeCount_text">
         wannable employee count
       </div>
       <div className="employeeCount_no">
-       {count}
+        {count}
       </div>
     </div>
   );

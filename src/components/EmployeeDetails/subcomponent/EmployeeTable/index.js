@@ -1,9 +1,11 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./style.css";
+import { EmployeeContext } from "../../../../context/EmployeeContext";
 
 
-function EmployeeTable({employeeList}) {
-
+function EmployeeTable() {
+  const [employees] = useContext(EmployeeContext)
+  
   return( 
         <div className="Empoyee_table">
     
@@ -15,8 +17,8 @@ function EmployeeTable({employeeList}) {
           <th>Deptname</th>
           <th>Deptid</th>
         </tr>
-        
-          {employeeList.map((emp) => {
+    
+            {employees.map((emp) => {
             console.log(emp);
             return <tr key={emp.empid}>
               <td> {emp.name}</td>
@@ -25,8 +27,7 @@ function EmployeeTable({employeeList}) {
               <td>{emp.dept}</td>
             </tr>
       
-})}
-          
+})} 
         
       </table>
       

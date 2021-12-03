@@ -4,18 +4,16 @@ import Introduction from "./components/Introduction";
 import EmployeeDetails from "./components/EmployeeDetails";
 import Footer from "./components/Footer";
 import { EmployeeProvider } from "./context/EmployeeContext";
-import { useState } from "react/cjs/react.development";
 
 function App() {
-  const [employeeList, setEmployeeList] = useState([])
   
   return (
     <div className="project">
       <EmployeeProvider>
-        <Header empCount={employeeList.length}/>
+        <Header/>
         <Introduction />
         <hr className="divider"></hr>
-        <EmployeeDetails employeeList={employeeList} setEmployeeList={setEmployeeList}/>
+        <EmployeeDetails />
       </EmployeeProvider>
       <Footer />
     </div>
