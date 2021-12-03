@@ -6,7 +6,7 @@ function Illustration() {
   return (
     <div className="Introduction">
       <div id="illustration_Image">
-        <img src={Illustrationimg} alt="" />
+        <img src={Illustrationimg} alt="" align-self="center"/>
       </div>
     </div>
   );
