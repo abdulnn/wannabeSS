@@ -1,10 +1,7 @@
 import "./style.css";
 import React from "react";
 
-function Employeecount({employeeList}) {
-
-  const count= (employeeList.length)
- 
+function Employeecount({count}) { 
   return (
     <div className="employeeCount">
       <div className="employeeCount_text">

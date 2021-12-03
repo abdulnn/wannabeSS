@@ -12,7 +12,7 @@ const options =[
   {id:'d3' ,label:'Accounts'}
 ] 
 
-export default function EmployeeForm({setEmployeeList, employeeList,setCount}) {
+export default function EmployeeForm({setEmployeeList}) {
 const value = useContext(EmployeeContext)
 let employees = value.employees;
 const [formvar, setFormvar]=useState({name:'',dob:'',empid:'',dept:''})
@@ -37,10 +37,7 @@ const updateDept = (e) => {
 const addEmp = e => {
   e.preventDefault();
   alert(JSON.stringify(formvar))
-   employees = employeeList;
-  employees.push(formvar)
-  setEmployeeList([...employees]);
-  console.log(employeeList.lenth)
+  setEmployeeList(curEmployeeList=>[...curEmployeeList,formvar]);
 }
 
  const clearScreen = (e) =>{

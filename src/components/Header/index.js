@@ -1,11 +1,11 @@
 import Softsuavelogo from './subcomponent/Softsuavelogo';
 import Employeecount from './subcomponent/EmployeeCount';
 import './style.css';
-const Header=({employeeList})=> {
+const Header=({empCount})=> {
     return (
         <div className='header'>
             <Softsuavelogo />
-            <Employeecount employeeList={employeeList}/>
+            <Employeecount count={empCount}/>
         </div>
     )
 }

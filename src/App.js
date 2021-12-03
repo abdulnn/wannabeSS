@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="project">
       <EmployeeProvider>
-        <Header employeeList={employeeList}/>
+        <Header empCount={employeeList.length}/>
         <Introduction />
         <hr className="divider"></hr>
         <EmployeeDetails employeeList={employeeList} setEmployeeList={setEmployeeList}/>

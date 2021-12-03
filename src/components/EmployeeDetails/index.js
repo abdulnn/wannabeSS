@@ -2,10 +2,10 @@ import EmployeeForm from './subcomponent/EmployeeForm';
 import EmployeeTable from './subcomponent/EmployeeTable';
 import './style.css';
 
- const EmployeeDetails = ({count,setCount, employeeList, setEmployeeList})=>{
+ const EmployeeDetails = ({employeeList, setEmployeeList})=>{
     return (
         <div className="employee_detail">
-            <EmployeeForm count={count} setCount={setCount} setEmployeeList={setEmployeeList} employeeList={employeeList}/>
+            <EmployeeForm setEmployeeList={setEmployeeList}/>
             <EmployeeTable employeeList={employeeList}/>
         </div>
     )
