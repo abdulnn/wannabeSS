@@ -35,6 +35,9 @@ const updateDept = (e) => {
 }
 
 const addEmp = e => {
+  setFormvar(
+    {name:'',dob:'',dept:'',empid:''}
+  )
   e.preventDefault();
   setEmployees([...employees,formvar])
   alert(JSON.stringify(formvar))

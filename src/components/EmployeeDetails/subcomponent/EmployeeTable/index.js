@@ -3,7 +3,7 @@ import "./style.css";
 import { EmployeeContext } from "../../../../context/EmployeeContext";
 
 
-function EmployeeTable() {
+function EmployeeTable({options}) {
   const [employees] = useContext(EmployeeContext)
   
   return( 
@@ -15,7 +15,6 @@ function EmployeeTable() {
           <th>Dob</th>
           <th>Empid</th>
           <th>Deptname</th>
-          <th>Deptid</th>
         </tr>
     
             {employees.map((emp) => {
@@ -25,6 +24,8 @@ function EmployeeTable() {
               <td> {emp.dob}</td>
               <td>{emp.empid}</td>
               <td>{emp.dept}</td>
+         
+            
             </tr>
       
 })} 
