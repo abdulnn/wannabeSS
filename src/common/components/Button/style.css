@@ -1,16 +1,16 @@
 button {
-    width: 90px;
-    height: 28.08px;
-    letter-spacing: 0.02em;
-    border-radius: 10px;
-  }
-  .primary{
-    background-color: #ff1a40;
-    color:antiquewhite
-  }
-  
-  .secondary{
-    background-color: white;
-    color:black;
-    border: red 1px solid;
-  }  
+  width: 90px;
+  height: 28.08px;
+  letter-spacing: 0.02em;
+  border-radius: 10px;
+}
+.primary {
+  background-color: #ff1a40;
+  color: antiquewhite;
+}
+
+.secondary {
+  background-color: white;
+  color: black;
+  border: red 1px solid;
+}
