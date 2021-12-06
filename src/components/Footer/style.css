@@ -1,9 +1,10 @@
 .footer{
+  
     width: 100%;
     height: 40px;
     background: #FF1A40;
     align-items: center;
     display: flex;
     justify-content: center;
- 
+  
 }

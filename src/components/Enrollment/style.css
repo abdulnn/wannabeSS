@@ -1,0 +1,14 @@
+.leftcomp{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:65%;
+}
+
+
+
+.landingimage{
+    width:65%;
+    align-items: center;
+   height:600px;
+}

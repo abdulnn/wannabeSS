@@ -2,11 +2,11 @@ import EmployeeForm from './subcomponent/EmployeeForm';
 import EmployeeTable from './subcomponent/EmployeeTable';
 import './style.css';
 
- const EmployeeDetails = ({options})=>{
+ const EmployeeDetails = ()=>{
     return (
         <div className="employee_detail">
             <EmployeeForm />
-            <EmployeeTable options={options}/>
+            <EmployeeTable />
         </div>
     )
 }

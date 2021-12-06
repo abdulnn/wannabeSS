@@ -3,7 +3,7 @@ import "./style.css";
 import { EmployeeContext } from "../../../../context/EmployeeContext";
 
 
-function EmployeeTable({options}) {
+function EmployeeTable() {
   const [employees] = useContext(EmployeeContext)
   
   return( 

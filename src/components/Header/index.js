@@ -1,13 +1,14 @@
 import Softsuavelogo from './subcomponent/Softsuavelogo';
 import Employeecount from './subcomponent/EmployeeCount';
 import './style.css';
-const Header=({empCount})=> {
+const Header=({isCoutVisible})=> {
+  
     return (
         <div className='header'>
             <Softsuavelogo />
-            <Employeecount count={empCount}/>
-        </div>
-    )
-}
+            {isCoutVisible?<Employeecount />:''}
+        </div>)
+       
+        }
 
 export default Header;

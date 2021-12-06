@@ -4,7 +4,7 @@ import {EmployeeContext} from '../../../../context/EmployeeContext'
 
 function Employeecount() { 
   const [employees] = useContext(EmployeeContext)
-
+     
   const count=(employees).length
   return (
     <div className="employeeCount">
