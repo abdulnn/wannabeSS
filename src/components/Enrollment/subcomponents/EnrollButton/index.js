@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import Button from '../../../../../common/components/Button'
+import Button from '../../../../common/components/Button'
 
 function EnrollButton() {
     return (
