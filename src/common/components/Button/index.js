@@ -1,11 +1,24 @@
 import React from "react";
 import'./style.css'
 
-function Button({ name, theme ,onClick}) {
+
+
+const getstyle = (theme,customClass)=>{
+  if(customClass){
+    return customClass;
+}
+else{
+  return `${theme === "primary" ? "primary" : "secondary"}`; 
+}
+}
+
+
+function Button({ name ,onClick, customClass,theme}) {
+
+
   return (
-    <button
-      className={`${theme === "primary" ? "primary" : "secondary"}`} onClick={onClick}
-    >
+    
+    <button className={getstyle(theme,customClass)}  onClick={onClick}>
       {name}
     </button>
   );
