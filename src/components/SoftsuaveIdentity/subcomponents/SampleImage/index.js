@@ -7,9 +7,9 @@ import'./style.css'
 const SampleImage = () => {
     return (
         <div className='sampleImages'>
-            <img src={image1} alt='' ></img>
-            <img src={image2} alt='' ></img>
-            <img src={image3} alt='' ></img>
+           <img src={image1} alt='' ></img>
+      <div className='image2'><img src={image2} alt='' ></img></div>
+       <img src={image3} alt='' ></img>
         </div>
     )
 }

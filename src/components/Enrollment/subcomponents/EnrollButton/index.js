@@ -6,7 +6,7 @@ function EnrollButton() {
     return (
       
         <div className='enrollbutton'>
-        <Button name='Enroll' />
+        <Button name='Enroll me...' customClass='enroll' />
 
         </div>
     )

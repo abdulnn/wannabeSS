@@ -1,0 +1,16 @@
+.enroll{
+    width:209px;
+    height:63px;
+    border-radius: 25px;
+    letter-spacing: 0.02em;
+    font-size: 20px;
+    background: linear-gradient(
+        90deg, orange, red,orange);
+    border:none;
+    border: 0.11355sspx dashed black;
+    color:white
+}
+.enroll:hover{
+border:1px dashed black;
+color:black;
+}
