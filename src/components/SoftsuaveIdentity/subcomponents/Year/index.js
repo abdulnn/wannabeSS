@@ -5,7 +5,7 @@ const Year = () => {
   const [seconds, setSeconds] = useState(new Date().getSeconds());
  var today = new Date(),
     hours = today.getHours(),
-    minutes = today.getMinutes();
+    minutes = '' + today.getMinutes();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,19 +17,19 @@ const Year = () => {
   }, []);
 
   function minute() {
-      if( minutes <= 1 )
-  {
-   return minutes= '0' + minutes;
+      if( minutes.length <= 1 )
+      {
+   return minutes = '0' + minutes
   }
   else{
-      return minutes
+      return minutes;
   }
 }
   return (
     <>
       <div className="homin">
         <div className="hours">{hours}</div>
-        <div className="minutes">{minute}</div>
+        <div className="minutes">{minute().toString()}</div>
       </div>
       <div className="seconds">{seconds}</div>
     </>
