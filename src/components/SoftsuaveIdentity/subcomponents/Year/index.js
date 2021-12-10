@@ -1,12 +1,39 @@
-import React from 'react'
-import './style.css'
+import React, { useEffect, useState } from "react";
+import "./style.css";
 
 const Year = () => {
-    return (
-        <div className='year'>
-        2021
-        </div>
-    )
-}
+  const [seconds, setSeconds] = useState(new Date().getSeconds());
+ var today = new Date(),
+    hours = today.getHours(),
+    minutes = today.getMinutes();
 
-export default Year
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds(() => new Date().getSeconds());
+      
+      console.log('hi')
+    }, 1000);
+     return () => clearInterval(interval);
+  }, []);
+
+  function minute() {
+      if( minutes <= 1 )
+  {
+   return minutes= '0' + minutes;
+  }
+  else{
+      return minutes
+  }
+}
+  return (
+    <>
+      <div className="homin">
+        <div className="hours">{hours}</div>
+        <div className="minutes">{minute}</div>
+      </div>
+      <div className="seconds">{seconds}</div>
+    </>
+  );
+};
+
+export default Year;

@@ -1,8 +1,25 @@
-.year{
+.homin{
+    display:flex;
+    flex-direction: row;
+}
+.hours{
     /* transform: rotate(-90deg); */
-    font-size:80px;
+    font-size:120px;
     color: #ff1a40;
     font-weight: 900;
-    padding:0 270px;
+    padding:0 18px;
     width:auto;
+}
+.minutes{
+    font-size:85px;
+    color: #ff1a40;
+    font-weight: 900;
+    padding:29px 25px;
+    width:auto;
+}
+.seconds{
+    font-size:70px;
+    color: #ff1a40;
+    font-weight: 900;
+    padding:4px 200px;
 }
