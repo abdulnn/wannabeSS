@@ -1,14 +1,17 @@
-import Softsuavelogo from './subcomponent/Softsuavelogo';
-import Employeecount from './subcomponent/EmployeeCount';
-import './style.css';
-const Header=({isCoutVisible})=> {
-  
-    return (
-        <div className='header'>
-            <Softsuavelogo />
-            {isCoutVisible?<Employeecount />:''}
-        </div>)
-       
-        }
+import Softsuavelogo from "./subcomponent/Softsuavelogo";
+import Employeecount from "./subcomponent/EmployeeCount";
+import "./style.css";
+import { useLocation } from "react-router";
+const Header = () => {
+  const curPath = useLocation().pathname;
+  const isEmpEnrollPage = (curPath == "/employee_enroll");
+
+  return (
+    <div className="header">
+      <Softsuavelogo />
+      {isEmpEnrollPage && <Employeecount />}
+    </div>
+  );
+};
 
 export default Header;

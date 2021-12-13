@@ -1,25 +1,33 @@
-import React from 'react'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-// import Introduction from "./components/Introduction";
-// import EmployeeDetails from "./components/EmployeeDetails";
+import EmployeeEnroll from "./Page2/EmployeeEnroll";
 import Footer from "./components/Footer";
 import { EmployeeProvider } from "./context/EmployeeContext";
 import LandingPage from "./Page/Landingpage";
+import Error from './DefaultPage/Error'
 
 function App() {
-
   return (
-    <div className="project">
+    <Router>
       <EmployeeProvider>
-        <Header isCoutVisible={false} />
-        {/* <Introduction />
-        <hr className="divider"></hr>
-        <EmployeeDetails />  */}
-         <LandingPage />
+        <div className="project">
+          <Header />
+          <Routes>
+            <Route
+              path="/employee_enroll"
+              exact
+              element={<EmployeeEnroll />}
+            />
+            <Route path="/" exact element={<LandingPage />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+          <Footer />
+        </div>
       </EmployeeProvider>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 export default App;
+//

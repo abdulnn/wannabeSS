@@ -10,8 +10,6 @@ const Year = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setSeconds(() => new Date().getSeconds());
-      
-      console.log('hi')
     }, 1000);
      return () => clearInterval(interval);
   }, []);
