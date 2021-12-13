@@ -1,0 +1,14 @@
+.Employeewebpage{
+   display:flex;
+   flex-direction: column;
+    gap: 18px;
+}
+
+
+.divider{
+    width: 70%;
+    height: 3px;
+    background: #C4C4C4;
+    align-items: center;
+    margin:0 240px
+}
