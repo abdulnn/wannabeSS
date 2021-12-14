@@ -7,7 +7,7 @@ const Employee_Enroll = () => {
     return (
         <div className='Employeewebpage'>
             <Introduction />
-            <hr className="divider"></hr>s
+            <hr className="divider"></hr>
             <EmployeeDetails />
         </div>
     )

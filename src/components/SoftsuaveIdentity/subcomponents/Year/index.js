@@ -7,7 +7,7 @@ const Year = () => {
     hours = today.getHours(),
     minutes = '' + today.getMinutes();
 
-  useEffect(() => {
+  useEffect( () => {
     const interval = setInterval(() => {
       setSeconds(() => new Date().getSeconds());
     }, 1000);
