@@ -1,72 +1,96 @@
-import React, {useState, useContext} from "react";
+import React, { useState, useContext } from "react";
 import "./style.css";
 import Fields from "../../../../common/components/Fields";
 import Button from "../../../../common/components/Button";
 import { EmployeeContext } from "../../../../context/EmployeeContext";
 
-
-
-const options =[
-  {id:'d1' ,label:'Technical'},
-  {id:'d2' ,label:'non-Technical'},
-  {id:'d3' ,label:'Accounts'}
-] 
+const options = [
+  { id: "d1", label: "Technical" },
+  { id: "d2", label: "non-Technical" },
+  { id: "d3", label: "Accounts" },
+];
 
 export default function EmployeeForm() {
-const [employees, setEmployees] = useContext(EmployeeContext)
+  const { addEmployee } = useContext(EmployeeContext);
 
-const [formvar, setFormvar]=useState({name:'',dob:'',empid:'',dept:''})
-const updateName = (e) => {
-  setFormvar(
-    {...formvar,name:e.currentTarget.value}
-  )
-}
+  const [formvar, setFormvar] = useState({
+    name: "",
+    dob: "",
+    empid: "",
+    dept: "",
+  });
 
-const updateDob = (e) => {
-  setFormvar(
-    {...formvar,dob:e.currentTarget.value}
-  )
-}
+  const updateName = (e) => {
+    setFormvar({ ...formvar, name: e.currentTarget.value });
+  };
 
-const updateDept = (e) => {
-  setFormvar(
-    {...formvar,dept:e.currentTarget.value, empid:formvar.empid.concat("emp", Date.now())}
-  )
-}
+  const updateDob = (e) => {
+    setFormvar({ ...formvar, dob: e.currentTarget.value });
+  };
 
-const addEmp = e => {
-  setFormvar(
-    {name:'',dob:'',dept:'',empid:''}
-  )
-  e.preventDefault();
-  setEmployees([...employees,formvar])
-  alert(JSON.stringify(formvar))
-}
+  const updateDept = (e) => {
+    setFormvar({
+      ...formvar,
+      dept: e.currentTarget.value,
+      empid: formvar.empid.concat("emp", Date.now()),
+    });
+  };
 
- const clearScreen = (e) =>{
-  e.preventDefault()
-  setFormvar(
-    {name:'',dob:'',dept:'',empid:''}
-  )
-}
+  const addEmp = (e) => {
+    e.preventDefault();
+    alert(JSON.stringify(formvar));
+    const newemployee = {
+      formvar,
+    };
+    debugger;
+    addEmployee(newemployee);
+
+    setFormvar({ name: "", dob: "", dept: "", empid: "" });
+  };
+
+  const clearScreen = (e) => {
+    e.preventDefault();
+    setFormvar({ name: "", dob: "", dept: "", empid: "" });
+  };
 
   return (
     <div className="employee_form">
       <form id="employee_form">
-        <Fields type="TF" placeholder="Enter name..." name="Name" onChange={updateName} value={formvar.name}/>
-        <Fields type="date" name="Dob" onChange={updateDob} value={formvar.dob}/>
-        <Fields type="empid" placeholder="emp1024487343" name="Emp Id" value={formvar.empid}/>
-        <Fields type="select"  name="Department" placeholder='Select your option' options={options} onChange={updateDept}/>
+        <Fields
+          type="TF"
+          placeholder="Enter name..."
+          name="Name"
+          onChange={updateName}
+          value={formvar.name}
+        />
+        <Fields
+          type="date"
+          name="Dob"
+          onChange={updateDob}
+          value={formvar.dob}
+        />
+        <Fields
+          type="empid"
+          placeholder="emp1024487343"
+          name="Emp Id"
+          value={formvar.empid}
+        />
+        <Fields
+          type="select"
+          name="Department"
+          placeholder="Select your option"
+          options={options}
+          onChange={updateDept}
+        />
         <div className="buttons">
           <div className="addbutton">
-            <Button name="add"  theme="primary" onClick={addEmp}/>
+            <Button name="add" theme="primary" onClick={addEmp} />
           </div>
           <div className="cancelbutton">
-            <Button name="cancel"  theme="secondary" onClick={clearScreen}/>
+            <Button name="cancel" theme="secondary" onClick={clearScreen} />
           </div>
         </div>
       </form>
     </div>
   );
 }
-
